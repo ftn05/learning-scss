@@ -51,6 +51,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  font-size: small;
 }
 
 html {
