@@ -1,56 +1,118 @@
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes slideRight {
   0% {
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 1;
   }
 }
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes slideLeft {
   0% {
-    transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 1;
   }
 }
+
+@-webkit-keyframes slideTop {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes slideTop {
   0% {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
+
+@-webkit-keyframes slideBottom {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes slideBottom {
   0% {
-    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
 }
 
 body {
   color: #ededed;
   background: #081b29;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 html {
@@ -64,9 +126,15 @@ html {
   width: 100%;
   padding: 0.15rem 10%;
   background: #051129;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 100;
 }
 
@@ -76,10 +144,12 @@ html {
   margin: 0;
   padding: 0;
   border-radius: 170px;
-  box-shadow: 0 0 20px #0ef;
+  -webkit-box-shadow: 0 0 20px #0ef;
+          box-shadow: 0 0 20px #0ef;
   position: relative;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  -webkit-animation: slideRight 1s ease forwards;
+          animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
@@ -89,16 +159,22 @@ html {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transform: 0.3s;
-  transition: 0.5s;
+  -webkit-transform: .3s;
+          transform: .3s;
+  -webkit-transition: .5s;
+  transition: .5s;
   opacity: 0;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  -webkit-animation: slideTop .5s ease forwards;
+          animation: slideTop .5s ease forwards;
+  -webkit-animation-delay: calc(.2s * var(--i));
+          animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
   color: #0ef;
   text-decoration: underline;
-  text-decoration-color: #0ef;
+  -webkit-text-decoration-color: #0ef;
+          text-decoration-color: #0ef;
   text-underline-offset: 0.4rem;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
